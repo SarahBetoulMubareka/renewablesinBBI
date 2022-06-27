@@ -1,0 +1,8 @@
+# renewablesinBBI
+Method to estimate the indicator “share of renewable energies used in the bio-based industries” (Melim-McLeod et al., 2022). This method  relies mainly on data available from Eurostat:
+-	the Complete energy balances as the reference energy dataset	 https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_c/default/table?lang=en
+-	the Energy supply and use by NACE Rev. 2 activity form the energy accounts (env_ac_pefasu) to downscale the energy dataset to the NACE 64 categories https://ec.europa.eu/eurostat/databrowser/view/env_ac_pefasu/default/table?lang=en 
+-	the annual detailed enterprise statistics for industry (sbs_na_ind_r2) to downscale to the two digit level NACE categories (bio-based industries only), based on the energy purchase	 https://ec.europa.eu/eurostat/databrowser/view/sbs_na_ind_r2/default/table?lang=en 
+Apart from Eurostat data, the script uses the share of bio-based activities at the NACE level 4 calculated by Ronzon et al. (2020) to be able to take into account the fact that NACE activities are sometimes partially bio-based.
+Since the datasets   downloaded from ESTAT rely on different classifications of economic activities and energy types, we also included correspondence tables in the script.
+The script is currently running for the EU27 + UK (at national level and EU27 aggregates). However, there are many datagaps that the cross analysis could not resolve. There is still one step to be made to solve the electricity and heat use in some sectors/countries. A draft paper is being drafted. It will include the results once the imputation issue is solved.
